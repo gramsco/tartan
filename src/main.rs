@@ -1,5 +1,6 @@
 use std::fs::File;
 
+use gif::Repeat;
 use image::{ImageBuffer, Rgb};
 use rand::Rng;
 
@@ -47,5 +48,7 @@ fn main() {
         let frame = gif::Frame::from_rgb(800,800,&img);
         let _ = encoder.write_frame(&frame);
     }
+    encoder.set_repeat(Repeat::Infinite).unwrap();
+
     println!("Done.")
 }
