@@ -7,7 +7,7 @@ use rand::Rng;
 fn create_random() -> [bool;800]{
     let mut arr:[bool; 800] = [false; 800];
     let mut rng = rand::thread_rng();
-    for _ in 0..300 {
+    for _ in 0..rng.gen_range(0..arr.len()) {
         let r = rng.gen_range(0..arr.len());
         arr[r] = true
     }
