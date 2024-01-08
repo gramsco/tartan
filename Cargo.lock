@@ -273,6 +273,7 @@ dependencies = [
  "gif",
  "image",
  "rand",
+ "rayon",
 ]
 
 [[package]]
